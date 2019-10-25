@@ -27,8 +27,8 @@ public class TodoRoute {
                         .GET("/todos", todoHandler::getAll)
                         .GET("/todos/{id}", todoHandler::getById)
                         .POST("/todos", todoHandler::save)
-                        .PUT("/todos/done/{id}", todoHandler::done)
-                        .PUT("/todos/content", todoHandler::updateContent)
+                        .PUT("/todos/{id}/done", todoHandler::done)
+                        .PUT("/todos/{id}/content", todoHandler::updateContent)
                         .DELETE("/todos/{id}", todoHandler::delete))
                 .build();
     }

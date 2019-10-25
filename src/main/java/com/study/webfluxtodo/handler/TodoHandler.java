@@ -70,9 +70,10 @@ public class TodoHandler {
     }
 
     public Mono<ServerResponse> updateContent(ServerRequest serverRequest) {
+        Long id = Long.valueOf(serverRequest.pathVariable("id"));
         Mono<TodoDto> todoDto = serverRequest.bodyToMono(TodoDto.class).doOnNext(this::validate);
         return todoDto
-                .flatMap(_todoDto -> todoRepository.findById(_todoDto.getId()).flatMap(todo -> {
+                .flatMap(_todoDto -> todoRepository.findById(id).flatMap(todo -> {
                     todo.setUpdatedAt(LocalDateTime.now());
                     todo.setContent(_todoDto.getContent());
                     return todoRepository.save(todo);
