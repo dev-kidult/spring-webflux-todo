@@ -18,7 +18,7 @@ GET `/api/todos` get all todos
 
 GET `/api/todos/{id}` get todo by id
 
-POST `/api/todos` save the post 
+POST `/api/todos` save the todo 
 
 with json body `{ "content" : "your todo" }` 
 
