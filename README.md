@@ -1,19 +1,19 @@
 spring webflux + r2dbc todo web study
 ---
-####Run the Application 
+#### Run the Application 
 with maven
 
 ```sbtshell
 mvn spring-boot:run
 ```
 
-####Using it
-#####DBMS
+#### Using it
+##### DBMS
 init data in `src` > `resources` > `schema.sql` 
 
 if you want fix the data modify the `schema.sql` file
 
-#####APIs
+##### APIs
 GET `/api/todos` get all todos
 
 GET `/api/todos/{id}` get todo by id
