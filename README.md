@@ -8,12 +8,12 @@ mvn spring-boot:run
 ```
 
 #### Using it
-##### DBMS
+###### DBMS
 init data in `src` > `resources` > `schema.sql` 
 
 if you want fix the data modify the `schema.sql` file
 
-##### APIs
+###### APIs
 GET `/api/todos` get all todos
 
 GET `/api/todos/{id}` get todo by id
